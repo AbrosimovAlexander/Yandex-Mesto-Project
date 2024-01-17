@@ -1,0 +1,11 @@
+.image-popup__group{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    max-width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}

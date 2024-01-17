@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexander Abrosimov">
+    <meta name="description" content="Блоги путешественников">
+    <meta name="keywords" content="Путешествия">
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Mesto</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img src="./images/logo.svg" alt="Логотип сайта" class="header__logo">
+      </header>
+
+      <main class="content">
+        <!--Блок profile-->
+        <section class="profile">
+          <img
+            src="./images/Avatar.jpg"
+            alt="Аватар профиля"
+            class="profile__avatar">
+          <div class="profile__info">
+            <div class="profile__header">
+              <h1 class="profile__title">Жак-Ив Кусто</h1>
+              <button
+                type="button"
+                class="profile__edit-button"
+                name="edit-button"
+                id="edit-button"
+                value="edit-button"></button>
+            </div>
+            <p class="profile__subtitle">Исследователь океана</p>
+          </div>
+          <button
+            type="button"
+            class="profile__add-button"
+            name="add-button"
+            id="add-button"
+            value="add-button"></button>
+        </section>
+
+        <!--Блок elements-->
+        <section class="elements">
+          <template id="element-template">
+            <div class="element">
+              <button type="button" class="element__trash-button" name="trash-button" id="trash-button" value="trash-button"></button>
+              <img
+                src=""
+                alt=""
+                class="element__image">
+              <div class="element__info">
+                <h3 class="element__title"></h3>
+                <button
+                  type="button"
+                  class="element__like-button"
+                  name="like-button"
+                  id="like-button"
+                  value="like-button"></button>
+              </div>
+            </div>
+          </template>
+        </section>
+        <!--Блок image-popup (блок для открытия фотографии карточки)-->
+        <section class="popup image-popup">
+          <div class="image-popup__group">
+            <img src="" alt="" class="image-popup__image">
+            <figcaption class="image-popup__figcaption"></figcaption>
+            <button
+              type="button"
+              class="popup__close-button"
+              name="popup__close-button"
+              id="image-popup__close-button"></button>
+          </div>
+        </section>
+        <!--Блок popup-->
+        <section class="popup profile-popup">
+          <form class="popup__container" name="profile-popup" novalidate>
+            <button
+              type="button"
+              class="popup__close-button"
+              name="popup__close-button"
+              id="popup-profile__close-button"></button>
+            <h3 class="popup__title">Редактировать профиль</h3>
+            <fieldset class="popup__form">
+              <div class="popup__input">
+                <input
+                type="text"
+                class="popup__text"
+                name="popup__text_1"
+                id="popup__text_1"
+                placeholder="Жак-Ив Кусто"
+                minlength="2" 
+                maxlength="40"
+                required
+                pattern="^[a-zA-Zа-яА-ЯёЁ -]+$" 
+                data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
+              <span class="popup__input-error popup__text_1-error"></span>
+              </div>
+              <div class="popup__input">
+              <input
+                type="text"
+                class="popup__text"
+                name="popup__text_2"
+                id="popup__text_2"
+                placeholder="Исследователь океана"
+                minlength="2" 
+                maxlength="200"
+                required
+                pattern="^[a-zA-Zа-яА-ЯёЁ -]+$" 
+                data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
+                <span class="popup__input-error popup__text_2-error"></span>
+              </div>
+              <button
+                type="submit"
+                class="popup__save-button">Сохранить</button>
+            </fieldset>
+          </form>
+        </section>
+        <!--Блок popup_add-card (блок для добавления карточки)-->
+        <section class="popup popup_add-card">
+          <form class="popup__container" name="popup_add-card" id="popup__container_add-card" novalidate>
+            <button
+              type="button"
+              class="popup__close-button"
+              name="popup__close-button"
+              id="popup-add-card__close-button"></button>
+            <h3 class="popup__title">Новое место</h3>
+            <fieldset class="popup__form">
+              <div class="popup__input">
+              <input
+                type="text"
+                class="popup__text"
+                name="popup__text_3"
+                id = 'popup__text_3'
+                placeholder="Название"
+                minlength="2" 
+                maxlength="30"
+                required
+                pattern="^[a-zA-Zа-яА-ЯёЁ -]+$" 
+                data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
+                <span class="popup__input-error popup__text_3-error"></span>
+              </div>
+              <div class="popup__input">
+              <input
+                type="url"
+                class="popup__text"
+                name="popup__text_4"
+                id = 'popup__text_4'
+                placeholder="Ссылка на картинку"
+                required>
+                <span class="popup__input-error popup__text_4-error"></span>
+              </div>
+              <button
+                type="submit"
+                class="popup__save-button"
+                id="popup__create-button">Создать</button>
+            </fieldset>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">&copy;2020 Mesto Russia</p>
+      </footer>
+    </div>
+    <script src="./pages/index.js"></script>
+  </body>
+</html>
