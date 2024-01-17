@@ -32,4 +32,4 @@
     реализована возможность нажатия кнопки "лайк"
     
 
-Ссылка проекта на GitHub: https://abrosimovalexander.github.io/mesto-project/index.html
+Ссылка проекта на GitHub: https://abrosimovalexander.github.io/Yandex-Mesto-Project/
